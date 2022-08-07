@@ -23,6 +23,11 @@
       "hasStyle": true
     },
     {
+      "title": "Form",
+      "hash": "#form-bind",
+      "view": "form-bind"
+    },
+    {
       "title": "404",
       "hash": "#404",
       "view": "404",

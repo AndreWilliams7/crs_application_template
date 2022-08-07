@@ -1,0 +1,60 @@
+<style>
+    .block {
+        background-color: blue;
+        color: azure;
+        height: 250px;
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .colorChange {
+        /* background-color: rgb(0, 250, 0); */
+        border: 2px solid black;
+        border-radius: 12px;
+        color: black;
+        height: 250px;
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<h1>Welcome to forms using a Binding-Engin</h1>
+
+<h3>Example of a basic form</h3>
+
+
+<label for="">
+    <div>
+        <div>First Name</div>
+        <input type="text" name="" id="firstname" value.bind="firstName">
+    </div>
+    <div>
+        <div>Last Name</div>
+        <input type="text" name="" id="lastname" value.bind="lastName">
+    </div>
+    <div class="result" data-id="[result]"> This is ${firstName} ${lastName}</div>
+    <button click.call="show">Show Result</button>
+</label>
+<h3>This is a div that will be styled by using the Binding Engin</h3>
+<div>
+    <div class="block" style.background.if="background == 'green' ? 'blue' "> I am a DIV </div>
+    <button class="colorDiv" click.call="colorChange"> Change Color </button>
+</div>
+<h3>This DIV will change color with style property binding</h3>
+<div style.background.if="ageValue >= 1 && ageValue < 50? '#6505f5' : ' rgb(0, 250, 0)'" class="colorChange"> I am a DIV
+</div>
+<input class='slider' type="range" min='1' max='100' value.bind="ageValue">
+<div class="AgeResult" id="result">Your age is ${ageValue}</div>
+
+<!-- style.background.if="age >= 1 && age < 50? '#6505f5' : ' rgb(0, 250, 0)'" -->
+
+<!-- change.call="displayRangeValue" -->
