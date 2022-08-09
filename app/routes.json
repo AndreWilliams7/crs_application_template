@@ -28,6 +28,16 @@
       "view": "form-bind"
     },
     {
+      "title": "Binding",
+      "hash": "#binding",
+      "view": "binding"
+    },
+    {
+      "title": "Bind-Direction",
+      "hash": "#bind-direction",
+      "view": "bind-direction"
+    },
+    {
       "title": "404",
       "hash": "#404",
       "view": "404",

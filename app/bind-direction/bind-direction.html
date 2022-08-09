@@ -1,0 +1,64 @@
+<style>
+    h1#bindingHeader {
+        color: chartreuse;
+    }
+
+    h2,
+    h3 {
+        color: #03b3c0;
+    }
+
+    div#staticDiv {
+        color: #e968c2;
+    }
+
+    span.cellNumber {
+        color: crimson;
+    }
+
+    div.fullNameDiv {
+        color: #b91e8b;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+</style>
+
+
+<h1 id="bindingHeader" inner-text.once="title"></h1>
+<h1 id="bindingHeader" inner-text.once="headerText" value.bind="headerText"></h1>
+
+
+
+<h2>Welcome to Binding-Direction Examples</h2>
+
+
+<h3>Once Of Binding</h3>
+<div id="staticDiv">First Name</div>
+<input class="firstName" type="text" value.bind="preTextFirstname">
+<div id="staticDiv">Last Name</div>
+<input class="lastName" type="text" value.bind="preTextLastname">
+
+
+
+
+<h3>One-way Binding</h3>
+<label for="One-Way">
+    <div id="staticDiv">First Name</div>
+    <input class="firstName" type="text" value.bind="firstName">
+
+    <div id="staticDiv">Last Name</div>
+    <input class="lastName" type="text" value.bind="lastName">
+
+    <div class="fullNameDiv" id="fullName">${firstName} ${lastName}</div>
+</label>
+
+
+
+
+<h3>Two-Way Binding</h3>
+<label for="Two-Way">
+    <div id="staticDiv">Cellphone Number</div>
+    <input type="text" value.bind="cellNumber">
+    <button click.Call="showResult"> Show Result </button>
+</label>
+<span class="cellNumber"></span>

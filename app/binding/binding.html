@@ -1,0 +1,25 @@
+<h2>Binding "Call event"</h2>
+
+
+
+<!-- click.Call event -->
+<label for="">
+    <div class="firstname">First Name</div>
+    <input type="text" value.bind="firstName">
+</label>
+
+<label for="">
+    <div class="lastname">Last Name</div>
+    <input type="text" value.bind="lastName">
+</label>
+
+<button id="result" click.Call="showResult">Show Result</button>
+<div id="fullName"></div>
+
+
+
+
+<!-- change.Call Event -->
+<div>Input any random input down below :</div>
+<input class="inputValue" change.Call="updateInputValue" type="text">
+<div class="inputResult"></div>
