@@ -38,6 +38,11 @@
       "view": "bind-direction"
     },
     {
+      "title": "Collection-Render",
+      "hash": "#collection-render",
+      "view": "collection-render"
+    },
+    {
       "title": "404",
       "hash": "#404",
       "view": "404",
