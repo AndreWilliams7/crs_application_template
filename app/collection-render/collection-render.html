@@ -1,14 +1,14 @@
-<h2 inner-text.once="staticHeader"></h2>
+<h2> Static Data Collection</h2>
 
-<button id="renderButton" click.call="renderData">Render List Data</button>
+<!-- <button type="button" id="renderButton" click.call="renderData">Render List Data</button> -->
 
 <template id="listData">
     <li>
-        <span>name</span>
-        <span>age</span>
-    </li>
-    <li>
-        <span>${firstName} ${lastName}</span>
-        <span>${age}</span>
+        <span data-id="firstName"></span>
+        <span data-id="lastName"></span>
+        <span data-id="age"></span>
     </li>
 </template>
+
+<ul id="displayList">
+</ul>
