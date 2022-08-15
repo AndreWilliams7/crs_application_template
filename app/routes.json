@@ -43,6 +43,12 @@
       "view": "collection-render"
     },
     {
+      "title": "Inflation-Manager",
+      "hash": "#inflation-manager",
+      "view": "inflation-manager"
+    },
+
+    {
       "title": "404",
       "hash": "#404",
       "view": "404",

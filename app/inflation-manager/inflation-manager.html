@@ -1,0 +1,15 @@
+<h2>${title}</h2>
+
+<button id="displayBtn" click.call="displayData">Display Employee Data</button>
+
+<template id="compData">
+    <li>
+        <span data-id="firstName">${firstName}</span>
+        <span data-id="lastName">${lastName} , </span>
+        <span style.color="age <= 36 ? 'lime' : 'crimson'" data-id="age">${age} , </span>
+        <span style.color="gender == 'male' ? 'blue' : 'violet'" data-id="gender">${gender}</span>
+    </li>
+</template>
+<ul id="employeeList">
+    Employees :
+</ul>

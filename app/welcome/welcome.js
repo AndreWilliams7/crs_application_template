@@ -5,5 +5,7 @@ export default class Welcome extends crsbinding.classes.ViewBase {
         await super.connectedCallback();
     }
 
-
+    async test() {
+        console.log("Testing");
+    }
 }
