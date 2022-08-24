@@ -1,0 +1,174 @@
+<style>
+    :root {
+        --border: 10px solid silver;
+        /* --rightBorder: 1px solid silver;
+        --lowerBorder: 1px solid silver;
+        --leftBorder: 1px solid silver; */
+        --size: 50px;
+    }
+
+    ul {
+        height: 250px;
+        width: 250px;
+        border: solid limegreen 3px;
+        border-radius: 7px;
+        padding: 10px;
+        list-style: none;
+    }
+
+    li:not(li:last-child) {
+        border-bottom: solid silver 2px;
+        color: hotpink;
+
+
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 50px);
+    }
+
+    .grid li {
+        border: solid silver 2px;
+    }
+
+    .pink {
+        color: hotpink;
+    }
+
+    .firstCorner {
+        border-radius: 50% 0 0 50%;
+    }
+
+    .lastCorner {
+        border-radius: 0 50% 50% 0;
+    }
+
+    #pill {
+        margin: 20px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #capsule {
+        margin: 20px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    #capsule ::before {
+        content: "";
+        position: absolute;
+    }
+
+    #capsule :hover::before {
+        content: "";
+        position: relative;
+        background-color: red;
+
+    }
+
+    #capsule :hover ::after {
+        content: "";
+        position: absolute;
+
+    }
+
+    #pill div:not(#middleP) {
+        height: 250px;
+        width: 250px;
+        border: solid rgb(4, 0, 255) 3px;
+        background-color: rgb(14, 185, 228);
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #capsule div {
+        height: 250px;
+        width: 250px;
+        /* border: solid rgb(4, 0, 255) 3px; */
+        background-color: rgb(14, 185, 228);
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        border-right: var(--border);
+        border-left: var(--border);
+    }
+
+    #middleP {
+        width: 125px;
+        background-color: yellow;
+        border-top: solid rgb(4, 0, 255) 3px;
+        border-bottom: solid rgb(4, 0, 255) 3px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #capsule:hover {
+        animation: pulse 1s infinite;
+        animation-timing-function: linear;
+        color: whitesmoke;
+        background-color: hotpink;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<h1>${title}</h1>
+
+<header>
+    <h2>Hello Andre</h2>
+    <div role="toolbar">
+        <input type="text" placeholder="Insert Text here..." role="text">
+        <button>button 1</button>
+        <button>Button 2</button>
+    </div>
+</header>
+<main>
+    <div role="group" aria-expanded="false">
+        <p>This is a normal paragraph</p>
+    </div>
+    <div>
+        <ul class="firstCorner">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+
+    <div id="pill">
+        <div class="firstCorner" id="leftP">Pill</div>
+        <div id="middleP">for</div>
+        <div class="lastCorner" id="rightP">DUMBASS #1</div>
+    </div>
+
+    <div id="capsule">
+        <div class="firstCorner" id="leftP">Pill</div>
+        <div id="middleP">for</div>
+        <div class="lastCorner" id="rightP">DUMBASS #1</div>
+    </div>
+</main>
+
+<aside></aside>
+<footer></footer>

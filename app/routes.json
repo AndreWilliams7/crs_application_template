@@ -49,6 +49,12 @@
     },
 
     {
+      "title": "HTML & CSS Testing Page",
+      "hash": "#htmlCss-testing-page",
+      "view": "htmlCss-testing-page"
+    },
+
+    {
       "title": "404",
       "hash": "#404",
       "view": "404",
