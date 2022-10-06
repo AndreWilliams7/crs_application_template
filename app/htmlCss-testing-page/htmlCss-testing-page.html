@@ -5,6 +5,8 @@
         --lowerBorder: 1px solid silver;
         --leftBorder: 1px solid silver; */
         --size: 50px;
+        --grid-rows: 1;
+        --grid-cols: 1;
     }
 
     ul {
@@ -132,6 +134,19 @@
             transform: scale(1);
         }
     }
+
+    #grid-window {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-rows: repeat(var(--grid-rows), 2fr);
+        grid-template-columns: repeat(var(--grid-cols), 2fr);
+    }
+
+    .grid-item {
+        padding: 1em;
+        border: 1px solid gray;
+        text-align: center;
+    }
 </style>
 
 <h1>${title}</h1>
@@ -173,6 +188,11 @@
         <div class="firstCorner" id="leftP">Pill</div>
         <div id="middleP">for</div>
         <div class="lastCorner" id="rightP">DUMBASS #1</div>
+    </div>
+
+    <button onclick="drawGrid(8, 8)">Draw Grid</button>
+    <div id="grid-window">
+
     </div>
 </main>
 
